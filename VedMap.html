@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ved Map Method</title>
+</head>
+
+<body>
+    <h1>Ved Map Method</h1>
+</body>
+<script>
+    Array.prototype.vedMap = function(callback) {
+    const resultArray = [];
+    for (let index = 0; index < this.length; index++) {
+        resultArray.push(callback(this[index], index, this));
+    }
+    return resultArray;
+}
+console.log(Array)
+     let arr = [2,3,4,5];
+     console.log(arr)
+  var res = arr.vedMap(num=>num*2);
+  console.log(res)
+
+</script>
+
+</html>
